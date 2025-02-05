@@ -4,3 +4,5 @@ dist/
 build/
 .env
 *.log
++.vite/deps/
++.vite/deps_temp*/
