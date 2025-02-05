@@ -1,0 +1,59 @@
+{
+  "appTitle": "AI Interview Assistant",
+  "steps": {
+    "resumeUpload": "Resume Upload",
+    "salaryRange": "Salary Range",
+    "interview": "Interview",
+    "results": "Results"
+  },
+  "upload": {
+    "title": "Upload Your Resume",
+    "description": "We'll analyze your resume using AI to provide personalized interview questions and feedback."
+  },
+  "analysis": {
+    "title": "Resume Analysis",
+    "overallScore": "Overall Score",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "recommendations": "Recommendations"
+  },
+  "interview": {
+    "questions": {
+      "interest": "What interests you about this position?",
+      "challenge": "Describe a challenging project you've worked on."
+    }
+  },
+  "mockData": {
+    "strengths": {
+      "technical": "Strong technical background",
+      "experience": "Relevant experience"
+    },
+    "weaknesses": {
+      "leadership": "Limited leadership experience"
+    },
+    "recommendations": {
+      "impact": "Highlight project impacts"
+    }
+  },
+  "resumeUpload": {
+    "dragAndDrop": "Drag and drop your resume PDF here",
+    "or": "or",
+    "browseFiles": "Browse Files"
+  },
+  "interviewSession": {
+    "questionCount": "Question {{current}} of {{total}}",
+    "placeholder": "Type your answer here...",
+    "submitAnswer": "Submit Answer"
+  },
+  "salarySelector": {
+    "title": "Select Expected Salary Range",
+    "ranges": {
+      "60-80": "$60k - $80k/year",
+      "80-100": "$80k - $100k/year",
+      "100-130": "$100k - $130k/year",
+      "130-160": "$130k - $160k/year",
+      "160-200": "$160k - $200k/year",
+      "200-250": "$200k - $250k/year"
+    }
+  }
+}

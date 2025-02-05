@@ -1,0 +1,59 @@
+{
+  "appTitle": "AI 面试助手",
+  "steps": {
+    "resumeUpload": "上传简历",
+    "salaryRange": "薪资范围",
+    "interview": "面试",
+    "results": "结果"
+  },
+  "upload": {
+    "title": "上传您的简历",
+    "description": "我们将使用 AI 分析您的简历，提供个性化的面试问题和反馈。"
+  },
+  "analysis": {
+    "title": "简历分析",
+    "overallScore": "总体评分",
+    "strengths": "优势",
+    "weaknesses": "不足",
+    "recommendations": "建议"
+  },
+  "interview": {
+    "questions": {
+      "interest": "是什么让您对这个职位感兴趣？",
+      "challenge": "请描述一个您经历过的具有挑战性的项目。"
+    }
+  },
+  "mockData": {
+    "strengths": {
+      "technical": "扎实的技术背景",
+      "experience": "相关工作经验"
+    },
+    "weaknesses": {
+      "leadership": "领导经验有限"
+    },
+    "recommendations": {
+      "impact": "突出项目影响力"
+    }
+  },
+  "resumeUpload": {
+    "dragAndDrop": "将您的简历 PDF 拖放到这里",
+    "or": "或",
+    "browseFiles": "浏览文件"
+  },
+  "interviewSession": {
+    "questionCount": "问题 {{current}}/{{total}}",
+    "placeholder": "在此输入您的答案...",
+    "submitAnswer": "提交答案"
+  },
+  "salarySelector": {
+    "title": "选择期望薪资范围",
+    "ranges": {
+      "10-15": "1万 - 1.5万/月",
+      "15-20": "1.5万 - 2万/月",
+      "20-25": "2万 - 2.5万/月",
+      "25-30": "2.5万 - 3万/月",
+      "30-40": "3万 - 4万/月",
+      "40-50": "4万 - 5万/月"
+    }
+  }
+}
