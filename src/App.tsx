@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, BrainCircuit } from 'lucide-react';
+import { FileText, BrainCircuit, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { ResumeUpload } from './components/ResumeUpload';
 import { SalarySelector } from './components/SalarySelector';
@@ -59,6 +59,49 @@ function App() {
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-8">
+          {/* Enhanced Slogan Section with Mobile Responsiveness */}
+          <div className="w-full max-w-4xl text-center py-6 sm:py-8 px-3 sm:px-4 bg-gradient-to-r from-blue-600/10 to-blue-400/10 rounded-2xl backdrop-blur-sm">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-3xl sm:text-5xl font-bold">
+                <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                  {t('slogan')}
+                </span>
+              </h2>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 text-gray-600">
+                <div className="flex items-center gap-2">
+                  <BrainCircuit className="w-5 sm:w-6 h-5 sm:h-6 text-blue-500 flex-shrink-0" />
+                  <div className="flex flex-col items-start">
+                    <span className="font-semibold text-sm sm:text-base">
+                      DeepSeek 驱动
+                    </span>
+                    <span className="text-xs sm:text-sm">顶尖 AI 模型支持</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FileText className="w-5 sm:w-6 h-5 sm:h-6 text-blue-500 flex-shrink-0" />
+                  <div className="flex flex-col items-start">
+                    <span className="font-semibold text-sm sm:text-base">
+                      深度简历解析
+                    </span>
+                    <span className="text-xs sm:text-sm">精准职业画像</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="w-5 sm:w-6 h-5 sm:h-6 text-blue-500 flex-shrink-0" />
+                  <div className="flex flex-col items-start">
+                    <span className="font-semibold text-sm sm:text-base">
+                      智能面试模拟
+                    </span>
+                    <span className="text-xs sm:text-sm">贴合岗位需求</span>
+                  </div>
+                </div>
+              </div>
+              <div className="text-xs sm:text-sm text-blue-600 font-medium">
+                Powered by DeepSeek AI Technology
+              </div>
+            </div>
+          </div>
+
           {/* Progress Steps */}
           <div className="w-full max-w-3xl mb-8">
             <div className="flex justify-between">
