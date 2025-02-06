@@ -24,32 +24,6 @@ const STEPS = [
   { number: 4, label: '结果', icon: CheckCircle },
 ] as const;
 
-// 获取步骤状态的工具函数
-const getStepStatus = (stepNumber: number, currentStep: number) => {
-  if (stepNumber === currentStep) return 'current';
-  if (stepNumber < currentStep) return 'completed';
-  return 'upcoming';
-};
-
-// 步骤状态样式映射
-const stepStatusStyles = {
-  current: {
-    circle: 'border-blue-600 bg-blue-50 text-blue-600',
-    text: 'text-blue-600',
-    line: 'bg-gray-200',
-  },
-  completed: {
-    circle: 'border-green-500 bg-green-50 text-green-500',
-    text: 'text-green-500',
-    line: 'bg-green-500',
-  },
-  upcoming: {
-    circle: 'border-gray-300 text-gray-400',
-    text: 'text-gray-500',
-    line: 'bg-gray-200',
-  },
-} as const;
-
 function App() {
   const { t } = useTranslation();
   const [step, setStep] = useState(1);
@@ -87,40 +61,6 @@ function App() {
   const handleInterviewComplete = (answers: InterviewQuestion[]) => {
     setInterviewResults(answers);
     setStep(4);
-  };
-
-  // 步骤指示器组件
-  const StepIndicator = ({
-    number,
-    label,
-    isLast,
-  }: {
-    number: number;
-    label: string;
-    isLast: boolean;
-  }) => {
-    const status = getStepStatus(number, step);
-    const styles = stepStatusStyles[status];
-
-    return (
-      <div className="flex items-start mb-6 last:mb-0">
-        <div className="relative">
-          <div
-            className={`w-6 h-6 text-sm rounded-full border-2 flex items-center justify-center ${styles.circle}`}
-          >
-            {number}
-          </div>
-          {!isLast && (
-            <div
-              className={`absolute left-3 top-6 w-[2px] h-10 -translate-x-1/2 ${styles.line}`}
-            />
-          )}
-        </div>
-        <span className={`ml-2 text-xs font-medium ${styles.text}`}>
-          {label}
-        </span>
-      </div>
-    );
   };
 
   // 内容区域组件
@@ -271,7 +211,7 @@ function App() {
               {/* Steps */}
               <div className="w-48 shrink-0">
                 <div className="sticky top-4 space-y-1">
-                  {STEPS.map((s, index) => (
+                  {STEPS.map((s) => (
                     <div
                       key={s.number}
                       className={`flex items-center p-3 rounded-xl transition-colors ${
